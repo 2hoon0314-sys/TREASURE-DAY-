@@ -121,28 +121,6 @@ if(diff > 0){
 }else{
     dday.textContent = "THANK YOU 💎";
 }
-const eventNameInput = document.getElementById("event-name");
-const eventPlaceInput = document.getElementById("event-place");
-const eventDateInput = document.getElementById("event-date");
-const saveEventBtn = document.getElementById("save-event");
-
-const title = document.querySelector(".event h2");
-const place = document.querySelector(".event p:nth-of-type(1)");
-const date = document.querySelector(".event p:nth-of-type(2)");
-
-const eventData = JSON.parse(localStorage.getItem("treasure-event")) || {
-    name: "THE STAGE",
-    place: "IGアリーナ",
-    date: "2026-08-01"
-};
-
-function loadEvent(){
-
-    title.textContent = eventData.name;
-    place.textContent = eventData.place;
-    date.textContent = eventData.date.replaceAll("-",".");
-
-    
 setTimeout(()=>{
 
     document.getElementById("splash").style.display="none";
