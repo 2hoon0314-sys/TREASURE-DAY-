@@ -167,7 +167,7 @@ visibility:hidden;
 .check-actions{
     display:flex;
     gap:10px;
-    margin:16px 0;
+    margin:16px 0 24px;
 }
 
 .check-actions button{
