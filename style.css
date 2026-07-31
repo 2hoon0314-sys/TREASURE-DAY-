@@ -1,1 +1,164 @@
+/* ===== TREASURE DAY ===== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+body{
+    background:#0F1115;
+    color:#ffffff;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",sans-serif;
+    min-height:100vh;
+}
+
+/* Splash */
+
+#splash{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:16px;
+    animation:fadeOut .8s ease 2s forwards;
+}
+
+.diamond{
+    font-size:64px;
+}
+
+#splash h1{
+    font-size:34px;
+    font-weight:700;
+}
+
+#splash p{
+    color:#9EA4B5;
+}
+
+/* Home */
+
+#app{
+    display:none;
+    padding:24px;
+}
+
+/* Event Card */
+
+.hero{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:24px;
+    margin-bottom:24px;
+}
+
+.label{
+    color:#4BA8FF;
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.hero p{
+    color:#C7CDD8;
+    margin-bottom:4px;
+}
+
+.countdown{
+    margin-top:18px;
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:999px;
+    background:#4BA8FF;
+    color:white;
+    font-weight:700;
+}
+
+/* Card */
+
+.card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:22px;
+}
+
+.card h3{
+    margin-bottom:18px;
+}
+
+/* Progress */
+
+.progress{
+    width:100%;
+    height:10px;
+    border-radius:999px;
+    background:#232833;
+    overflow:hidden;
+}
+
+#progress-bar{
+    width:0%;
+    height:100%;
+    background:#4BA8FF;
+    transition:.35s;
+}
+
+.percent{
+    text-align:right;
+    margin-top:8px;
+    color:#9EA4B5;
+}
+
+/* Checklist */
+
+#checklist{
+    margin-top:22px;
+}
+
+.item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.item input{
+    width:22px;
+    height:22px;
+}
+
+.item span{
+    font-size:17px;
+}
+
+/* Animation */
+
+@keyframes fadeOut{
+
+0%{
+opacity:1;
+}
+
+80%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+visibility:hidden;
+}
+
+}
