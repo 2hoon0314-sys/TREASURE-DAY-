@@ -142,30 +142,7 @@ function loadEvent(){
     place.textContent = eventData.place;
     date.textContent = eventData.date.replaceAll("-",".");
 
-    eventNameInput.value = eventData.name;
-    eventPlaceInput.value = eventData.place;
-    eventDateInput.value = eventData.date;
-
-}
-
-loadEvent();
-
-saveEventBtn.addEventListener("click",()=>{
-
-    eventData.name = eventNameInput.value;
-    eventData.place = eventPlaceInput.value;
-    eventData.date = eventDateInput.value;
-
-    localStorage.setItem(
-        "treasure-event",
-        JSON.stringify(eventData)
-    );
-
-    loadEvent();
-
-    alert("保存しました💎");
-
-});
+    
 setTimeout(()=>{
 
     document.getElementById("splash").style.display="none";
