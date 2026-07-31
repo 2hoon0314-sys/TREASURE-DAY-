@@ -121,7 +121,51 @@ if(diff > 0){
 }else{
     dday.textContent = "THANK YOU 💎";
 }
+const eventNameInput = document.getElementById("event-name");
+const eventPlaceInput = document.getElementById("event-place");
+const eventDateInput = document.getElementById("event-date");
+const saveEventBtn = document.getElementById("save-event");
 
+const title = document.querySelector(".event h2");
+const place = document.querySelector(".event p:nth-of-type(1)");
+const date = document.querySelector(".event p:nth-of-type(2)");
+
+const eventData = JSON.parse(localStorage.getItem("treasure-event")) || {
+    name: "THE STAGE",
+    place: "IGアリーナ",
+    date: "2026-08-01"
+};
+
+function loadEvent(){
+
+    title.textContent = eventData.name;
+    place.textContent = eventData.place;
+    date.textContent = eventData.date.replaceAll("-",".");
+
+    eventNameInput.value = eventData.name;
+    eventPlaceInput.value = eventData.place;
+    eventDateInput.value = eventData.date;
+
+}
+
+loadEvent();
+
+saveEventBtn.addEventListener("click",()=>{
+
+    eventData.name = eventNameInput.value;
+    eventData.place = eventPlaceInput.value;
+    eventData.date = eventDateInput.value;
+
+    localStorage.setItem(
+        "treasure-event",
+        JSON.stringify(eventData)
+    );
+
+    loadEvent();
+
+    alert("保存しました💎");
+
+});
 setTimeout(()=>{
 
     document.getElementById("splash").style.display="none";
