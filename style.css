@@ -162,3 +162,31 @@ visibility:hidden;
 }
 
 }
+/* ===== Buttons ===== */
+
+.check-actions{
+    display:flex;
+    gap:10px;
+    margin:16px 0;
+}
+
+.check-actions button{
+    flex:1;
+    border:none;
+    border-radius:14px;
+    padding:12px;
+    background:#4BA8FF;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.check-actions button:active{
+    transform:scale(.97);
+}
+
+#clear-all{
+    background:#2B313D;
+}
